@@ -56,9 +56,6 @@ body{
     height:35px;
 }
 
-.logo:hover{
-    animation:moveInRight 1s ease-out;
-}
 
 /* we want to set texts in the middle */
 .text-box{
@@ -68,6 +65,7 @@ body{
     /* translate (width, height) */
      /* in relation to element itself */
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary{
@@ -77,6 +75,7 @@ body{
     /* to prevent the animated
     texts to have shaky effect */
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 /* span is inline element */
@@ -159,4 +158,39 @@ body{
     }
 }
 
+/* pseudo class tyle elements
+on particular occation */
+/* these are initial state */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display:inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover{
+    /* move up the button
+    when hover*/
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active{
+    /* when clicked button
+    goes down a bit */
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color:#777;
+    /* to position button
+    center, add text-align:center
+    for .text-box */
+
+}
 

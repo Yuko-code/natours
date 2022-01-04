@@ -1,4 +1,4 @@
-# My learning on Udemy - Advanced CSS and Sass
+# Natours - Advanced CSS and Sass notes
 
 Notes and resouces of the [Advanced CSS and Sass by Jonas Schmedtmann](https://www.udemy.com/).
 
@@ -48,7 +48,7 @@ After finishing this course, you will:
 - [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
 - [clip-path generator](https://bennettfeely.com/clippy/)
 - [animation-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)
-- []()
+- [box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 - []()
 - []()
 - []()
