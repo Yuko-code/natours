@@ -47,7 +47,7 @@ After finishing this course, you will:
 - [linear-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient())
 - [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
 - [clip-path generator](https://bennettfeely.com/clippy/)
-- []()
+- [animation-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)
 - []()
 - []()
 - []()

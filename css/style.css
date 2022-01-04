@@ -38,4 +38,125 @@ body{
     /* to create the corner - clip */
     /* clip-path:polygon(x y, x y, x y); */
     clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position:relative;
 }
+
+.logo-box{
+    /* position logo at the left corner */
+    /* set parent(header) position:relative */
+    position:absolute;
+    top:40px;
+    left:40px;
+
+}
+
+.logo{
+    /* always control image size with heright */
+    /* width will be automatically adjusted */
+    height:35px;
+}
+
+.logo:hover{
+    animation:moveInRight 1s ease-out;
+}
+
+/* we want to set texts in the middle */
+.text-box{
+    position:absolute;
+    top: 40%;   /* in relation to parent element*/
+    left: 50%;   /* in relation to parent element*/
+    /* translate (width, height) */
+     /* in relation to element itself */
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    color:#fff;
+    text-transform:uppercase;
+
+    /* to prevent the animated
+    texts to have shaky effect */
+    backface-visibility: hidden;
+}
+
+/* span is inline element */
+/* set both text display:block */
+.heading-primary-main{
+    display:block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+/* set animation effect */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function:ease-out;
+    /*
+    animation-iteration-count:3;
+    animation-timing-function: ease-out;
+    animation-delay:3s;
+    */
+}
+
+.heading-primary-sub{
+    display:block;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing: 17.4px;
+    /* this is a shorthand */
+    animation:moveInRight 1s ease-out;
+}
+
+
+/*animate the title */
+@keyframes moveInLeft {
+    /* where animation starts */
+    0%{
+        opacity:0; /* first it's invisible */
+        /* x: left to right */
+        /* negative - move the element to the right  */
+        transform:translateX(-100px)
+        /* rotate(50deg) */;
+    }
+    /*
+    60%{
+        transform:rotate(120deg);
+    }
+    */
+    80%{
+        /* bounce back! */
+        transform:translateX(10px);
+    }
+
+    /* where animation ends */
+    100%{
+        opacity:1;
+         /* final is where it is now  */
+        transform: translate(0);
+
+    }
+}
+
+@keyframes moveInRight {
+    /* where animation starts */
+    0%{
+        opacity:0; /* first it's invisible */
+        /* x: left to right */
+        /* positive - move the element to the left  */
+        transform:translateX(100px);
+    }
+
+    80%{
+        /* bounce back! */
+        transform:translateX(-10px);
+    }
+
+    /* where animation ends */
+    100%{
+        opacity:1;
+         /* final is where it is now  */
+        transform: translate(0);
+
+    }
+}
+
+
