@@ -1,6 +1,10 @@
 $color-primary: #55c57a;
 $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
+$color-grey-dark:#777;
+$color-white:#fff;
+$color-black:#000;
+
 
 *,
 *::after,
@@ -20,7 +24,7 @@ body{
     font-weight:400;
     /* font-size: 16px; */
     line-height:1.7;
-    color:#777;
+    color:$color-white;
     /* ---------------- */
     padding:3rem;
     /* set box-sizing here
@@ -43,48 +47,45 @@ body{
     /* clip-path:polygon(x y, x y, x y); */
     clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
     position:relative;
-}
 
-.header__logo-box{
+    &__logo-box{
     /* position logo at the left corner */
     /* set parent(header) position:relative */
     position:absolute;
     top:4rem;
     left:4rem;
+    }
 
-}
+    &__logo{
+        /* always control image size with heright */
+        /* width will be automatically adjusted */
+        height:3.5rem;
+    }
 
-.header__logo{
-    /* always control image size with heright */
-    /* width will be automatically adjusted */
-    height:3.5rem;
-}
+    /* we want to set texts in the middle */
+    &__text-box{
+        position:absolute;
+        top: 40%;   /* in relation to parent element*/
+        left: 50%;   /* in relation to parent element*/
+        /* translate (width, height) */
+        /* in relation to element itself */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-
-/* we want to set texts in the middle */
-.header__text-box{
-    position:absolute;
-    top: 40%;   /* in relation to parent element*/
-    left: 50%;   /* in relation to parent element*/
-    /* translate (width, height) */
-     /* in relation to element itself */
-    transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .heading-primary{
-    color:#fff;
+    color:$color-white;
     text-transform:uppercase;
 
     /* to prevent the animated
     texts to have shaky effect */
     backface-visibility: hidden;
     margin-bottom: 6rem;
-}
-
-/* span is inline element */
+    /* span is inline element */
 /* set both text display:block */
-.heading-primary--main{
+&--main{
     display:block;
     font-size: 6rem;
     font-weight: 400;
@@ -99,8 +100,7 @@ body{
     animation-delay:3s;
     */
 }
-
-.heading-primary--sub{
+&--sub{
     display:block;
     font-size:2rem;
     font-weight:700;
@@ -108,6 +108,12 @@ body{
     /* this is a shorthand */
     animation:moveInRight 1s ease-out;
 }
+
+}
+
+
+
+
 
 
 /*animate the title */
@@ -179,11 +185,12 @@ body{
     }
 }
 
-/* pseudo class tyle elements
+.btn{
+    /* pseudo class tyle elements
 on particular occation */
 /* these are initial state */
-.btn:link,
-.btn:visited {
+&:link,
+&:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -194,29 +201,23 @@ on particular occation */
     font-size:1.6rem;
 }
 
-.btn:hover{
+&:hover{
     /* move up the button
     when hover*/
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
 }
 
-.btn:active{
+
+&:active{
     /* when clicked button
     goes down a bit */
     transform: translateY(-.1rem);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
 }
 
-.btn--white{
-    background-color: #fff;
-    color:#777;
-    /* to position button
-    center, add text-align:center
-    for .text-box */
-}
 
-.btn::after{
+&::after{
     content: "";
     display: inline-block;
     height:100%;
@@ -229,16 +230,82 @@ on particular occation */
     transition:all .4s;
 }
 
-.btn--white::after{
-    background-color: #fff;
+&--white{
+    background-color: $color-white;
+    color:$color-grey-dark;
+    /* to position button
+    center, add text-align:center
+    for .text-box */
+    &::after{
+        background-color: $color-white;
+    }
 }
 
-.btn:hover::after{
+
+
+&:hover::after{
     transform:scaleX(1.4) scaleY(1.6);
     opacity:0;
 }
 
-.btn--animated{
+&--animated{
     animation:moveInButtom .5s ease-out .75s;
     animation-fill-mode:backwards;
+}
+
+
+/* pseudo class tyle elements
+on particular occation */
+/* these are initial state */
+&:link,
+&:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display:inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position:relative;
+    font-size:1.6rem;
+}
+
+&:hover{
+    /* move up the button
+    when hover*/
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    &::after{
+        transform:scaleX(1.4) scaleY(1.6);
+        opacity:0;
+    }
+}
+
+
+&:active{
+    /* when clicked button
+    goes down a bit */
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+}
+
+
+&::after{
+    content: "";
+    display: inline-block;
+    height:100%;
+    width:100%;
+    border-radius:10rem;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition:all .4s;
+}
+
+&--animated{
+    animation:moveInButtom .5s ease-out .75s;
+    animation-fill-mode:backwards;
+}
+
+
 }
