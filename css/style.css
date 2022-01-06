@@ -1,3 +1,55 @@
+@keyframes moveInRight {
+  /* where animation starts */
+  0% {
+    opacity: 0;
+    /* first it's invisible */
+    /* x: left to right */
+    /* positive - move the element to the left  */
+    transform: translateX(10rem); }
+  80% {
+    /* bounce back! */
+    transform: translateX(-1rem); }
+  /* where animation ends */
+  100% {
+    opacity: 1;
+    /* final is where it is now  */
+    transform: translate(0); } }
+
+@keyframes moveInButtom {
+  /* where animation starts */
+  0% {
+    opacity: 0;
+    /* positive - move it down (Y)  */
+    transform: translateY(3rem); }
+  /* where animation ends */
+  100% {
+    opacity: 1;
+    /* final is where it is now  */
+    transform: translate(0); } }
+
+/*animate the title */
+@keyframes moveInLeft {
+  /* where animation starts */
+  0% {
+    opacity: 0;
+    /* first it's invisible */
+    /* x: left to right */
+    /* negative - move the element to the right  */
+    transform: translateX(-10rem); }
+  /*
+    60%{
+        transform:rotate(120deg);
+    }
+    */
+  80% {
+    /* bounce back! */
+    transform: translateX(1rem); }
+  /* where animation ends */
+  100% {
+    opacity: 1;
+    /* final is where it is now  */
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -10,6 +62,9 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+body {
   /* initial set up */
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -19,41 +74,7 @@ body {
   /* ---------------- */
   padding: 3rem;
   /* set box-sizing here
-    then *{box-sizing:inherit} */
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  /* multiple BG-image */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  /* center, bottom, % etc */
-  background-position: top;
-  /* to create the corner - clip */
-  /* clip-path:polygon(x y, x y, x y); */
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  position: relative;
-  /* we want to set texts in the middle */ }
-  .header__logo-box {
-    /* position logo at the left corner */
-    /* set parent(header) position:relative */
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    /* always control image size with heright */
-    /* width will be automatically adjusted */
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    /* in relation to parent element*/
-    left: 50%;
-    /* in relation to parent element*/
-    /* translate (width, height) */
-    /* in relation to element itself */
-    transform: translate(-50%, -50%);
-    text-align: center; }
+        then *{box-sizing:inherit} */ }
 
 .heading-primary {
   color: #fff;
@@ -86,62 +107,28 @@ body {
     /* this is a shorthand */
     animation: moveInRight 1s ease-out; }
 
-/*animate the title */
-@keyframes moveInLeft {
-  /* where animation starts */
-  0% {
-    opacity: 0;
-    /* first it's invisible */
-    /* x: left to right */
-    /* negative - move the element to the right  */
-    transform: translateX(-10rem); }
-  /*
-    60%{
-        transform:rotate(120deg);
-    }
-    */
-  80% {
-    /* bounce back! */
-    transform: translateX(1rem); }
-  /* where animation ends */
-  100% {
-    opacity: 1;
-    /* final is where it is now  */
-    transform: translate(0); } }
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-@keyframes moveInRight {
-  /* where animation starts */
-  0% {
-    opacity: 0;
-    /* first it's invisible */
-    /* x: left to right */
-    /* positive - move the element to the left  */
-    transform: translateX(10rem); }
-  80% {
-    /* bounce back! */
-    transform: translateX(-1rem); }
-  /* where animation ends */
-  100% {
-    opacity: 1;
-    /* final is where it is now  */
-    transform: translate(0); } }
+.u-center-text {
+  text-align: center; }
 
-@keyframes moveInButtom {
-  /* where animation starts */
-  0% {
-    opacity: 0;
-    /* positive - move it down (Y)  */
-    transform: translateY(3rem); }
-  /* where animation ends */
-  100% {
-    opacity: 1;
-    /* final is where it is now  */
-    transform: translate(0); } }
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 .btn {
-  /* pseudo class tyle elements
-on particular occation */
-  /* these are initial state */
   /* pseudo class tyle elements
 on particular occation */
   /* these are initial state */ }
@@ -189,39 +176,68 @@ on particular occation */
   .btn--animated {
     animation: moveInButtom .5s ease-out .75s;
     animation-fill-mode: backwards; }
-  .btn:link, .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem; }
-  .btn:hover {
-    /* move up the button
-    when hover*/
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-    .btn:hover::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0; }
-  .btn:active {
-    /* when clicked button
-    goes down a bit */
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-  .btn::after {
+
+.row {
+  max-width: 114rem;
+  color: #000;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
     content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  height: 95vh;
+  /* multiple BG-image */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  /* center, bottom, % etc */
+  background-position: top;
+  /* to create the corner - clip */
+  /* clip-path:polygon(x y, x y, x y); */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+  /* we want to set texts in the middle */ }
+  .header__logo-box {
+    /* position logo at the left corner */
+    /* set parent(header) position:relative */
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s; }
-  .btn--animated {
-    animation: moveInButtom .5s ease-out .75s;
-    animation-fill-mode: backwards; }
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    /* always control image size with heright */
+    /* width will be automatically adjusted */
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /* in relation to parent element*/
+    left: 50%;
+    /* in relation to parent element*/
+    /* translate (width, height) */
+    /* in relation to element itself */
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
