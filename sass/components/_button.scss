@@ -55,7 +55,16 @@ on particular occation */
         background-color: $color-white;
     }
 }
-
+&--green{
+    background-color: $color-primary;
+    color:$color-white;
+    /* to position button
+    center, add text-align:center
+    for .text-box */
+    &::after{
+        background-color: $color-primary;
+    }
+}
 
 
 &:hover::after{
@@ -67,8 +76,6 @@ on particular occation */
     animation:moveInButtom .5s ease-out .75s;
     animation-fill-mode:backwards;
 }
-
-
 
 }
 
@@ -96,3 +103,4 @@ on particular occation */
 
     }
 }
+
