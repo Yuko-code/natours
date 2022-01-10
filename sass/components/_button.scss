@@ -1,6 +1,7 @@
 
 
 .btn{
+&,
     /* pseudo class tyle elements
 on particular occation */
 /* these are initial state */
@@ -14,6 +15,10 @@ on particular occation */
     transition: all .2s;
     position:relative;
     font-size:1.6rem;
+         //change for the <button> element
+         border:none;
+         cursor: pointer;
+
 }
 
 &:hover{
@@ -24,7 +29,10 @@ on particular occation */
 }
 
 
-&:active{
+&:active,
+&:focus
+{
+    outline:none;
     /* when clicked button
     goes down a bit */
     transform: translateY(-.1rem);
@@ -58,6 +66,7 @@ on particular occation */
 &--green{
     background-color: $color-primary;
     color:$color-white;
+
     /* to position button
     center, add text-align:center
     for .text-box */

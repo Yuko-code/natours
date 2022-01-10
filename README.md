@@ -57,7 +57,7 @@ After finishing this course, you will:
 - [HTML special characters](https://css-tricks.com/snippets/html/glyphs/)
 - [download icons](https://linea.io/)
 - [background-blend-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode)
-- []()
+- [filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 - []()
 - []()
 - []()
