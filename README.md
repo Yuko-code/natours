@@ -60,7 +60,7 @@ After finishing this course, you will:
 - [filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 - [Free background video](https://coverr.co/)
 - [Easing functions](https://easings.net/)
-- []()
+- [Screen Resolution Stats Worldwide](https://gs.statcounter.com/screen-resolution-stats)
 - []()
 - []()
 - []()
