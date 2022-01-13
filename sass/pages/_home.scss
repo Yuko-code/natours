@@ -6,7 +6,6 @@
     @include respond(tab-port){
         padding:20rem 0;
     }
-
 }
 
 .section-features{
@@ -15,10 +14,18 @@
         to right bottom,
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)),
-        url("../img/nat-4.jpg");
+        url("../img/nat-4-small.jpg");
         background-size: cover;
         transform:skewY(-7deg);
         margin-top:-10rem;
+        @media (min-resolution:192dpi) and (min-width:37.5em),//600/16=37.5 2000/16=125
+        (min-width:125em){//apple retina highest resolution
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+            url("../img/nat-4.jpg");
+    }
 
         & > *{ //direct child    .section-features *=all children -->.row
             transform:skewY(7deg)
