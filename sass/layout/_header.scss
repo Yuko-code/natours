@@ -22,9 +22,9 @@
     height:95vh;
     }
 
-    @media (min-resolution:192dpi) and (min-width:37.5em),//600/16=37.5 2000/16=125
-           (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
-           (min-width:125em){//apple retina highest resolution
+    @media only screen and(min-resolution:192dpi) and (min-width:37.5em),//600/16=37.5 2000/16=125
+           only screen and(-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
+           only screen and(min-width:125em){//apple retina highest resolution
         background-image: linear-gradient(
             to right bottom,
             rgba($color-primary-light, 0.8),
