@@ -1,4 +1,4 @@
-# Natours - Advanced CSS and Sass notes
+# Natours - Advanced CSS and Sass
 [<img src="https://github.com/Yuko-code/Yuko-code/blob/main/natours.png" width="900">](https://yuko-code.github.io/natours/)
 
 ## Overview
