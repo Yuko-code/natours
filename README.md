@@ -1,21 +1,11 @@
 # Natours - Advanced CSS and Sass notes
 
-Notes and resouces of the [Advanced CSS and Sass by Jonas Schmedtmann](https://www.udemy.com/).
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
-### The course
+A project built with [Advanced CSS and Sass by Jonas Schmedtmann](https://www.udemy.com/).
+
+## The course objectives
 
 After finishing this course, you will:
 
@@ -29,19 +19,12 @@ After finishing this course, you will:
 
 5) Be able to architect large CSS codebases for reusability and maintainability using Sass.
 
-
-
-## My process
-
-### Built with
-
+## Built with
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- Sass CSS
 
-### Useful resources
+
+## Useful resources
 
 - [background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 - [linear-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient())
@@ -61,25 +44,10 @@ After finishing this course, you will:
 - [Free background video](https://coverr.co/)
 - [Easing functions](https://easings.net/)
 - [Screen Resolution Stats Worldwide](https://gs.statcounter.com/screen-resolution-stats)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-
-
-
-
 
 ## Author
+- Yuko Taniguchi - [YTWeb&Design](https://ytwebxdesign.com/)
 
-- Website - [YTWeb&Design](https://ytwebxdesign.com/)
-- Frontend Mentor - [@Yuko-code](https://www.frontendmentor.io/profile/Yuko-code)
-- Twitter - [@codieTamago](https://www.twitter.com/codieTamago)
+## Credits
+- Jonas Schmedtmann - [Advanced CSS and Sass](https://www.udemy.com/)
+
